@@ -3,7 +3,7 @@
 sudo yum install -y epel-release
 sudo rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
 sudo cp mariadb.repo /etc/yum.repos.d
-sudo rpm -Uvh http://nginx.org/packages/centos/7/x86_64/RPMS/nginx-1.14.0-1.el7_4.ngx.x86_64.rpm
+sudo rpm -Uvh http://nginx.org/packages/centos/7/x86_64/RPMS/nginx-1.16.1-1.el7.ngx.x86_64.rpm
 sudo yum install -y zip unzip git composer java-1.8.0-openjdk mariadb-server php php-fpm php-mysqlnd php-gd php-curl php-mbstring php-dom php-opcache php-soap --enablerepo=remi-php73
 sudo systemctl enable nginx && sudo systemctl start nginx && sudo systemctl enable mariadb && sudo systemctl start mariadb && sudo systemctl enable php-fpm && sudo systemctl start php-fpm
 mysqladmin -u root password root
@@ -18,7 +18,7 @@ sudo cp nginx.conf /etc/nginx/conf.d
 composer global require drush/drush
 echo 'export PATH=$HOME/.config/composer/vendor/bin:$PATH' >> ~/.bash_profile
 source ~/.bash_profile
-sudo rpm -Uvh https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.5.4.rpm
+sudo rpm -Uvh https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.3.2-x86_64.rpm
 yes | sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install ingest-attachment
 sudo systemctl enable elasticsearch && sudo systemctl start elasticsearch
 sudo semanage permissive -a httpd_t
