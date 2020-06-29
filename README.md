@@ -5,4 +5,4 @@ run this in home dir as root user
 
 usually to switch to root user you can "sudo su"
 
-`source <(curl https://raw.githubusercontent.com/industrialdev/setup-centos-lemp/master/init.sh)`
+`source <(curl https://raw.githubusercontent.com/industrialdev/setup-centos7-lemp/master/init.sh)`
